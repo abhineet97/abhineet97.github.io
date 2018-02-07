@@ -12,6 +12,7 @@
 
 <!-- Color the status bar on mobile devices -->
 <meta name="theme-color" content="#808080">
+<link rel="manifest" href="/manifest.json">
 <style>
 body {
   background: gray;
@@ -84,6 +85,12 @@ a:active {
 <a rel="me" href="https://github.com/abhineet97">Github</a>
 <a rel="me" href="https://keybase.io/abhineet97">PGP</a>
 </main>
-<!-- Built with love using Web Starter Kit -->
+<script>
+if("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(() => {console.log("Service worker registered.");});
+}
+</script>
 </body>
 </html>
