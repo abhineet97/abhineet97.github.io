@@ -1,95 +1,102 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="The homepage of Abhineet Tamrakar.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abhineet Tamrakar</title>
-
-<!-- Disable tap highlight on IE -->
-<meta name="msapplication-tap-highlight" content="no">
-
-<!-- Color the status bar on mobile devices -->
-<meta name="theme-color" content="#808080">
-<link rel="manifest" href="/manifest.json">
-<style>
-body {
-  background: gray;
-  font-family: "Arial",sans-serif;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 5em;
-  margin: 20px auto;
-  text-shadow: 5px 5px white;
-}
-
-main {
-  display: block;
-  margin: 48px;
-}
-
-header h2 {
-  color: #fff;
-}
-
-a {
-  background: #fff;
-  border: solid #000;
-  color: #000;
-  display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-}
-
-a:active {
-  background: #000;
-  color: #fff;
-}
-
-@media (min-width:600px) {
-  header h1 {
-    font-size: 10em;
-    margin-top: 10%;
-  }
-
-  a {
-    box-shadow: 5px 5px black;
-    display: initial;
-    margin-right: 5px;
-    position: relative;
-  }
-
-  a:active {
-    background: #fff;
-    box-shadow: none;
-    color: #000;
-    left: 5px;
-    top: 5px;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="The homepage of Abhineet Tamrakar.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abhineet Tamrakar</title>
+  
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#808080">
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    body {
+      background: gray;
+      font-family: Arial, sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 756px;
+      text-align: center;
+      color: #fff;
+    }
+    
+    header h1 {
+      font-size: 5em;
+      margin: 20px auto;
+      text-shadow: 5px 5px white;
+      color: #000;
+    }
+    
+    main {
+      display: block;
+      margin: auto 48px;
+    }
+    
+    main > p {
+      margin-bottom: 3em;
+      margin-left: auto;
+      margin-right: auto;      
+      max-width: 480px;
+      text-align: justify;
+      font-family: monospace;
+      font-size: 16px;
+    }
+    
+    a {
+      background: #fff;
+      box-shadow: 5px 5px black;
+      border: solid #000;
+      color: #000;
+      font-weight: bold;
+      margin: 10px;
+      padding: 1em;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    a:active {
+      background: #fff;
+      color: #000;
+      left: 5px;
+      top: 5px;
+      position:relative;
+      box-shadow:none;
+    }
+    
+    @media (min-width:600px) {
+      header h1 {
+        font-size: 10em;
+        margin-top: 10%;
+      }
+    }
+      
+  </style>
 </head>
 <body>
-<header>
-  <h1>HELLO</h1>
-  <h2>Abhineet Tamrakar</h2>
-</header>
-<main>
-<a rel="me" href="https://twitter.com/abhineet97">Twitter</a>
-<a rel="me" href="https://github.com/abhineet97">Github</a>
-</main>
-<script>
-if("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then(() => {console.log("Service worker registered.");});
-}
-</script>
+  <header>
+    <h1>HELLO</h1>
+  </header>
+  <main>
+    <p>I'm <strong>Abhineet</strong> &mdash; a web developer, systems
+    programmer and tech enthusiast from Raipur, Chhattisgarh. Feel free to
+    contact me using any of the following, I'll get back to you as soon as
+    possible.</p>
+  </main>
+  <section>
+    <a rel="me" href="mailto:abhineet97@gmail.com">Email</a>
+    <a rel="me" href="https://twitter.com/abhineet97">Twitter</a>
+    <a rel="me" href="https://github.com/abhineet97">Github</a>
+  </section>
+  <script>
+    if("serviceWorker" in navigator) {
+      navigator.serviceWorker
+      .register("/sw.js")
+      .then(() => {console.log("Service worker registered.");});
+    }
+  </script>
 </body>
 </html>
